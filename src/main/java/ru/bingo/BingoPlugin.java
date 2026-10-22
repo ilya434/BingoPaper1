@@ -156,7 +156,7 @@ public final class BingoPlugin extends JavaPlugin implements Listener {
     boolean d2 = true;
     for (int i = 0; i < 5; i++) {
         if (!done.contains(card.get(i * 5 + i))) d1 = false;
-        if (!done.contains(card.get(i * 5 + (4 - i))) d2 = false;
+        if (!done.contains(card.get(i * 5 + (4 - i)))) d2 = false;
     }
 
     return d1 || d2;
