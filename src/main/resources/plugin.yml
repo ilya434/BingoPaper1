@@ -1,0 +1,15 @@
+name: Bingo
+version: 1.0.0
+main: ru.bingo.BingoPlugin
+api-version: '1.21'
+author: ServerAdmin
+description: Vanilla-style Minecraft Bingo with automatic rounds and winner stats.
+commands:
+  bingo:
+    description: Bingo game commands
+    usage: /bingo [card|winners|stats|start|stop]
+    aliases: [bn]
+permissions:
+  bingo.admin:
+    description: Allows managing Bingo rounds
+    default: op

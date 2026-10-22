@@ -1,0 +1,16 @@
+СБОРКА Bingo для Paper 1.21.1 через онлайн-среду
+
+1. Открой https://replit.com/ и войди/создай аккаунт.
+2. Создай новый проект (Repl) с шаблоном Java.
+3. Загрузи файлы из этого ZIP в проект, сохранив структуру:
+   pom.xml
+   src/main/java/ru/bingo/BingoPlugin.java
+   src/main/resources/plugin.yml
+   src/main/resources/config.yml
+4. Открой Shell/Console и выполни:
+   mvn clean package
+5. Если сборка успешна, JAR будет в папке target с именем Bingo-1.0.0.jar.
+6. Скачай этот JAR и загрузи в папку plugins на H1Cloud, затем перезапусти сервер.
+
+Требования: Maven должен быть доступен в среде; сборке нужен интернет для загрузки Paper API.
+Не загружай ZIP проекта непосредственно в папку plugins.

@@ -1,0 +1,11 @@
+# Automatic round interval in minutes (120 = 2 hours)
+interval-minutes: 120
+# Number of seconds before a round starts after server startup
+first-round-delay-seconds: 30
+# Round length in minutes; 0 means no time limit
+round-length-minutes: 60
+reward-diamonds: 3
+# How often the plugin checks inventories for required items (ticks)
+scan-interval-ticks: 40
+# true = players need all 5 items in a row (horizontal/vertical/diagonal)
+# The card is 5x5 and contains vanilla survival items.
