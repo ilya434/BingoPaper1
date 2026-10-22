@@ -129,27 +129,36 @@ public final class BingoPlugin extends JavaPlugin implements Listener {
         return false;
     }
 
-    private boolean hasLine(Set<Material> done) {
-        for (int row = 0; row < 5; row++) {
-            boolean ok = true;
-            for (int col = 0; col < 5; col++) if (!done.contains(card.get(row * 5 + col))) ok = false;
-            if (ok) return true;
-        }
+    private boolean hasBingo(List<String> card, Set<String> done) {
+    for (int row = 0; row < 5; row++) {
+        boolean ok = true;
         for (int col = 0; col < 5; col++) {
-            boolean ok = true;
-                for (int row = 0; row < 5; row++) {
             if (!done.contains(card.get(row * 5 + col))) {
                 ok = false;
+                break;
             }
         }
         if (ok) return true;
     }
 
-    boolean d1 = true, d2 = true;
+    for (int col = 0; col < 5; col++) {
+        boolean ok = true;
+        for (int row = 0; row < 5; row++) {
+            if (!done.contains(card.get(row * 5 + col))) {
+                ok = false;
+                break;
+            }
+        }
+        if (ok) return true;
+    }
+
+    boolean d1 = true;
+    boolean d2 = true;
     for (int i = 0; i < 5; i++) {
         if (!done.contains(card.get(i * 5 + i))) d1 = false;
         if (!done.contains(card.get(i * 5 + (4 - i))) d2 = false;
     }
+
     return d1 || d2;
 }
     private void declareWinner(Player p) {
