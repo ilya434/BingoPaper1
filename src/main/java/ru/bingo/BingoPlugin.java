@@ -129,7 +129,7 @@ public final class BingoPlugin extends JavaPlugin implements Listener {
         return false;
     }
 
-    private boolean hasBingo(List<String> card, Set<String> done) {
+    private boolean hasLine(Set<Material> done) {
     for (int row = 0; row < 5; row++) {
         boolean ok = true;
         for (int col = 0; col < 5; col++) {
